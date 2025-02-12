@@ -4,6 +4,7 @@
   "package": "cn.ksmcbrigade.wso.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "PngMetadataMixin"
   ],
   "client": [
     "LoadingOverlayMixin"

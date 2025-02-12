@@ -30,7 +30,7 @@ public class LoadingOverlayMixin {
         int width = 96;
         int height = 96;
 
-        context.drawTexture(new Identifier(MOD_ID,"gui/icon.png"),(SWidth-width)/2,(SHeight-height)/2-height/2,0,0,width,height,width,height);
+        context.drawTexture(Identifier.of(MOD_ID,"gui/icon.png"),(SWidth-width)/2,(SHeight-height)/2-height/2,0,0,width,height,width,height);
     }
 
     @Inject(method = "renderProgressBar",at = @At("HEAD"),cancellable = true)
@@ -42,7 +42,7 @@ public class LoadingOverlayMixin {
         int width = 32;
         int height = 32;
 
-        context.drawTexture(new Identifier(MOD_ID,"gui/loading/"+now+".png"),(SWidth-width)/2,(SHeight-height)/2+2*height,0,0,width,height,width,height);
+        context.drawTexture(Identifier.of(MOD_ID,"gui/loading/"+now+".png"),(SWidth-width)/2,(SHeight-height)/2+2*height,0,0,width,height,width,height);
 
         now++;
 
